@@ -1,0 +1,61 @@
+<mat-toolbar color="primary">
+  <div class="col-sm-12">
+    <button class="float-right" mat-flat-button color="primary" (click)="logoutUser()"> <i class="material-icons">
+        power_settings_new
+      </i> Log Out</button>
+  </div>
+</mat-toolbar>
+<form #jobDescription="ngForm">
+  <mat-spinner class="loading-indicator" *ngIf="spinner"></mat-spinner>
+  <mat-card *ngIf="!spinner">
+    <div class="row">
+      <div class="col-sm-3">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Search By Location" name="location" #location="ngModel"
+            [(ngModel)]="jobDetailsModel.Location" (keyup)="searchJobDetails('location',jobDetailsModel.Location)">
+        </mat-form-field>
+      </div>
+      <div class="col-sm-3">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Search By Exprience..." name="exprience" #exprience="ngModel"
+            [(ngModel)]="jobDetailsModel.Exprience" (keyup)="searchJobDetails('experience',jobDetailsModel.Exprience)">
+        </mat-form-field>
+      </div>
+      <div class="col-sm-3">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Search By Skill..." name="skill" #skill="ngModel"
+            [(ngModel)]="jobDetailsModel.Skill" (keyup)="searchJobDetails('skill',jobDetailsModel.Skill)">
+        </mat-form-field>
+      </div>
+    </div>
+    <br />
+    <p-table #dt [value]="allJobs" [paginator]="true" [rows]="15">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Company </th>
+          <th>Skills</th>
+          <th [pSortableColumn]="'location'">Location <p-sortIcon [field]="'location'"></p-sortIcon>
+          </th>
+          <th [pSortableColumn]="'experience'">Experience <p-sortIcon [field]="'experience'"></p-sortIcon>
+          </th>
+          <th>Apply</th>
+        </tr>
+        <tr>
+          <th>
+            <input pInputText type="text"
+              (input)="dt.filter($event.target.value,'companyname','companyname'.filterMatchMode)">
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-jobs>
+        <tr>
+          <td>{{jobs.companyname}}</td>
+          <td>{{jobs.skills}}</td>
+          <td>{{jobs.location}}</td>
+          <td>{{jobs.experience}}</td>
+          <td> <a href="{{jobs.applylink}}" target="_blank">Click To Apply</a> </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </mat-card>
+</form>

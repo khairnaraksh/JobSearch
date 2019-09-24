@@ -1,0 +1,57 @@
+.intro-2 {
+  background: url('https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img%20(11).jpg')no-repeat center center;
+  background-size: cover;
+}
+
+.view {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+
+.card {
+  margin-top: 30px;
+  background-color: rgba(229, 228, 255, 0.2);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+  border: 0;
+}
+
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+.purple-gradient {
+  background: -webkit-linear-gradient(50deg, #ff6ec4, #7873f5) !important;
+  background: -o-linear-gradient(50deg, #ff6ec4, #7873f5) !important;
+  background: linear-gradient(40deg, #ff6ec4, #7873f5) !important;
+}
+
+.form-header {
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+  color: #fff;
+  text-align: center;
+  margin-top: -3.13rem;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  -webkit-border-radius: .125rem;
+  border-radius: .125rem;
+}
+
+.md-form label {
+  color: #ffffff;
+}
+
+.md-form .form-control {
+  color: #fff;
+}
+
+.err {
+  color:red;
+}
+.full-width {
+    width: 100%;
+  }

@@ -1,29 +1,2 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer role="navigation" class="sidenav morpheus-den-gradient" fixedInViewport="true"
-    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
-    [opened]="(isHandset$ | async)">
-    <mat-nav-list>
-      <img src="./../assets/images/websiteLogo.jpg">
-      <a mat-list-item routerLink="/Dashboard" (click)="drawer.toggle()">
-        <mat-icon>home</mat-icon> <span class="nav-caption">DashBoard</span>
-      </a>
-      <a mat-list-item routerLink="/Customer" (click)="drawer.toggle()">
-        <mat-icon>shopping_cart</mat-icon> <span class="nav-caption">Customer</span>
-      </a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <div class="col-sm-12">
-        <button mat-icon-button (click)="drawer.toggle()">
-          <mat-icon>menu</mat-icon>
-        </button>
 
-        <!-- <a class="navbar-brand"><strong class="companyName">Food Factory</strong></a> -->
-      </div>
-    </mat-toolbar>
-    <main>
       <router-outlet></router-outlet>
-    </main>
-  </mat-sidenav-content>
-</mat-sidenav-container>

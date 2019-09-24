@@ -1,0 +1,43 @@
+<section class="view intro-2">
+  <div class="mask rgba-stylish-strong h-100 d-flex justify-content-center align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-5 col-lg-6 col-md-10 col-sm-12 mx-auto mt-5">
+          <div class="card wow fadeIn" data-wow-delay="0.3s"
+            style="visibility: visible; animation-name: fadeIn; animation-delay: 0.3s;">
+            <div class="card-body">
+              <div class="form-header purple-gradient">
+                <h3>
+                  <i class="fa fa-sign-in" aria-hidden="true"></i> Log in:
+                </h3>
+              </div>
+              <form id="contact-form" #loginForm="ngForm" name="contact-form">
+                <div>
+                  <mat-form-field class="full-width">
+                    <input matInput placeholder="UserName" name="Email" [(ngModel)]="loginModel.Email" #Email="ngModel"
+                      required>
+                  </mat-form-field>
+                </div>
+                <div>
+                  <mat-form-field class="full-width">
+                    <input matInput type="password" placeholder="Password" name="Password"
+                      [(ngModel)]="loginModel.Password" #Password="ngModel" required>
+                  </mat-form-field>
+                </div>
+                <div class="text-center">
+                  <button class="btn purple-gradient btn-lg waves-effect waves-light" [disabled]="!loginForm.form.valid"
+                    (click)="onLoggedin(loginModel)">
+                    Sign In
+                  </button>
+                  <div class="text-center err" *ngIf="LoginError !== ''">
+                    <h4>{{ LoginError }}</h4>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
