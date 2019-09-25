@@ -5,11 +5,10 @@
 * PrimeNg
 
 
-## Project Setup
-
-1)clone Project
-2)Do Npm Install so all dependency and package will be install.
-3)Do 'ng Serve'
+## Project Installation Setup
+1. Clone Project
+2. Do Npm Install For all dependency and package will be install.
+3.Do 'ng Serve'
 
 ## for Login
 username = 'user'
