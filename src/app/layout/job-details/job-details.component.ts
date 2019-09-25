@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { JobDetailsService } from 'src/shared/services/layout/job-details.service';
 import { Router } from '@angular/router';
+import { IjobDetailsModel } from 'src/shared/model/jobDetails.model'
 @Component({
   selector: 'app-job-details',
   templateUrl: './job-details.component.html',
@@ -8,10 +9,10 @@ import { Router } from '@angular/router';
 })
 export class JobDetailsComponent implements OnInit {
   public allJobs: string[] = [];
-  public jobDetailsModel: string[] = [];
+  public jobDetailsModel: IjobDetailsModel= <IjobDetailsModel>{};;
   public testAllJobs: string[] = [];
   public spinner: boolean = true;
-
+  public companyname: any =[];
   constructor(private jobDetailsService: JobDetailsService, private router: Router) { }
 
   ngOnInit() {
