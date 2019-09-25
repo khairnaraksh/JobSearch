@@ -1,7 +1,9 @@
-# Job Details
+# Job Details Whats Included
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.0.
-In this Project I have Used Angular Material, and Prime ng.
+* Angular 8+ & Typescript
+* Angular Material
+* PrimeNg
+
 
 ## Project Setup
 
