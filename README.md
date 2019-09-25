@@ -15,7 +15,7 @@
 ## for Login
 * username = 'user'
 * password = 'user'
- is also implemented.
+
  
 ## Assumptions
   Initially on load all Available jobs shown and then depends on Skill, Expirence and Location.
