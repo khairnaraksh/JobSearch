@@ -7,8 +7,9 @@
 
 ## Project Installation Setup
 1. Clone Project
-2. Do Npm Install For all dependency and package will be install.
-3.Do 'ng Serve'
+2. Do Npm Install For all dependency and package will be install
+3. Do 'ng Serve' 
+4. Open Browser Navigate to `http://localhost:4200/`
 
 ## for Login
 username = 'user'
